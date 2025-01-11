@@ -1,0 +1,101 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    grid-template-columns: 10em 1fr;
+    grid-template-rows: 4rem 1fr 4em;
+     min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(17, 15, 138);
+    color: white;
+    text-align: center;
+}
+
+.a-side {
+    grid-area: nav;
+    background-color: #e7e7e7;
+    min-height: calc(100vh - 4rem);
+    padding: 0 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    line-height: 1.5rem;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0;
+}
+
+main {
+    grid-area: main;
+    background-color: #e7e7e7;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.stock {
+    color: #555;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    min-height: 100px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.card .btn {
+    background-color: #3f4652;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    margin-top: 1rem;
+}
+
+.card img {
+    margin: 0.5rem;
+    max-width: 100%;
+    flex-grow: 1;
+
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #e7e7e7;
+    text-align: center;
+    line-height: 3em;
+    font-size: 0.9rem;
+
+}
